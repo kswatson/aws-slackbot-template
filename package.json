@@ -1,0 +1,9 @@
+{
+  "name": "slack-bot-template",
+  "version": "0.0.0",
+  "description": "",
+  "author": "kwatson",
+  "dependencies": {
+    "request": "^2.83.0"
+  }
+}

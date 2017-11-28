@@ -1,0 +1,25 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Parameters:
+  SlackVerificationToken:
+    Type: String
+    Description: Token to verify that requests are actually coming from Slack. Slash commands and interactive messages will both use this verification token.
+  BotOuthAccessToken:
+    Type: String
+    Description: Token automatically generated when you installed the Slack app to your team. You can use this to authenticate your app
+Resources:
+  SlackEventHandler:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: index.slack_event
+      Runtime: nodejs6.10
+      Events:
+        PostResource:
+          Type: Api
+          Properties:
+            Path: /events
+            Method: post
+      Environment:
+        Variables:
+          SLACK_VERIFICATION_TOKEN: !Ref SlackVerificationToken
+          BOT_OAUTH_ACCESS_TOKEN: !Ref BotOuthAccessToken
