@@ -38,4 +38,4 @@ This command will package and upload the Lambda code to the S3 bucket BUCKET_NAM
 6. In your Slack App go to Event Subscriptions. Enable events and put the Invoke Url as the Request Url. Once verified Slack will forward events to your API.
 
 ### Test Slack App
-In Slack send a message to your bot. You should get a response: 'You said: <Your Message>'
+In Slack send a message to your bot. You should get a response: `'You said: <Your Message>'`
