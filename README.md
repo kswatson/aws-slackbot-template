@@ -2,9 +2,9 @@
 Cloudformation template to create a Slack bot backend via Lambda and API Gateway
 
 # What Do These Files Do?
-index.js - Contains all the code to handle recieving/sending to/from Slack. You should not need to modify this file.
-slack_bot_template.yaml - The AWS SAM Cloudformation template. You may want to modify this to add/modify AWS resources.
-bot_response.js - Contains the Slack bot handler function. This is where you bot code will go.
+* index.js - Contains all the code to handle recieving/sending to/from Slack. You should not need to modify this file.
+* slack_bot_template.yaml - The AWS SAM Cloudformation template. You may want to modify this to add/modify AWS resources.
+* bot_response.js - Contains the Slack bot handler function. This is where you bot code will go.
 
 The only code that you will need to modify is the function inside bot_response.js
 ```
